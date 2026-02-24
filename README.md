@@ -74,41 +74,41 @@ User Click (UI)  /  HTTP Request (API)
 ## 4. Layer Dependency Diagram
 ```mermaid
 graph TD
-    subgraph Presentation["🖥️ PRESENTATION LAYER"]
-        UI["UI\n(VCL Forms)"]
-        API["API\n(REST / Indy HTTP)"]
+    subgraph Presentation["PRESENTATION LAYER"]
+        UI["UI (VCL Forms)"]
+        API["API(REST / Indy HTTP)"]
     end
 
-    subgraph Application["⚙️ APPLICATION LAYER"]
-        UC["UseCases\n(Orchestrators)"]
-        DTO["UseCases/DTOs\n(Data Transfer Objects)"]
+    subgraph Application["APPLICATION LAYER"]
+        UC["UseCases(Orchestrators)"]
+        DTO["UseCases/DTOs(Data Transfer Objects)"]
     end
 
-    subgraph Business["📋 BUSINESS LOGIC LAYER"]
-        SVC["Services\n(Task, User, Auth, Permission)"]
+    subgraph Business["BUSINESS LOGIC LAYER"]
+        SVC["Services(Task, User, Auth, Permission)"]
     end
 
-    subgraph DomainLayer["🏛️ DOMAIN LAYER (innermost)"]
-        DOM["Domain\n(Entities, Value Objects)"]
-        EVT["Domain\n(Domain Events)"]
-        SPEC["Domain\n(Specifications)"]
+    subgraph DomainLayer["DOMAIN LAYER (innermost)"]
+        DOM["Domain(Entities, Value Objects)"]
+        EVT["Domain(Domain Events)"]
+        SPEC["Domain(Specifications)"]
     end
 
-    subgraph Infra["🗄️ INFRASTRUCTURE LAYER"]
-        REPO["Infrastructure\n(Repositories)"]
-        DB["Infrastructure\n(DatabaseManager)"]
-        CACHE["Infrastructure\n(CacheManager)"]
-        EVTD["Infrastructure\n(EventDispatcher)"]
-        SEED["Infrastructure\n(DataSeeder)"]
+    subgraph Infra["INFRASTRUCTURE LAYER"]
+        REPO["Infrastructure(Repositories)"]
+        DB["Infrastructure(DatabaseManager)"]
+        CACHE["Infrastructure(CacheManager)"]
+        EVTD["Infrastructure(EventDispatcher)"]
+        SEED["Infrastructure(DataSeeder)"]
     end
 
-    subgraph CrossCutting["🔧 CROSS-CUTTING"]
-        IFACE["Interfaces\n(AppInterfaces / InfraInterfaces)"]
-        COMMON["Common\n(Result, Logger)"]
-        CORE["Core\n(SecurityContext)"]
-        SEC["Security\n(Sanitizer, RateLimiter)"]
-        THR["Threading\n(BackgroundJobs, JobManager)"]
-        DI["DependencyInjection\n(ServiceContainer)"]
+    subgraph CrossCutting["CROSS-CUTTING"]
+        IFACE["Interfaces(AppInterfaces / InfraInterfaces)"]
+        COMMON["Common(Result, Logger)"]
+        CORE["Core(SecurityContext)"]
+        SEC["Security(Sanitizer, RateLimiter)"]
+        THR["Threading(BackgroundJobs, JobManager)"]
+        DI["DependencyInjection(ServiceContainer)"]
     end
 
     UI -->|"calls"| UC
