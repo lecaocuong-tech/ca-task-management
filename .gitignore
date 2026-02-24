@@ -1,0 +1,35 @@
+# Delphi compiled units
+*.dcu
+
+# Delphi compiled packages
+*.bpl
+*.dcp
+
+# Delphi executable
+*.exe
+
+# Delphi object files
+*.obj
+
+# Delphi resource files
+*.res
+
+# IDE state files
+*.dsk
+*.local
+
+# IDE History
+__history/
+
+# IDE Cache
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
